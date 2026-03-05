@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo">logo</span>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">News</a></li>
+                    <li class="btn"><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            </header>
+
+        <div class="hero container">
+            <div class="hero--info">
+                <h2>3D game Dev</h2>
+                <h1>Work that we produce for our clients</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typeset
+
+                    industry's standard.</p>
+                <button class="btn">Get more details</button>
+                <button id="openModal" class="btn">Reklama</button>
+
+            </div>
+            <img src="/img/269B4CE9-5601-475C-AFB0-4067280391F6.PNG" alt="">
+        </div>
+    </div>
+
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>The reklama modul</h2>
+            <img src="/img/269B4CE9-5601-475C-AFB0-4067280391F6.PNG" alt="">
+        </div>
+    </div>
+
+
+<script>
+    // Get elements
+    const modal = document.getElementById('myModal');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.querySelector('.modal .close');
+
+    // Open modal when button is clicked
+    openBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    // Close when the close icon is clicked
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close when clicking outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+</body>
+
